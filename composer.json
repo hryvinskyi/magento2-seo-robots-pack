@@ -1,0 +1,25 @@
+{
+    "name": "hryvinskyi/magento2-seo-robots-pack",
+    "version": "1.0.0",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "hryvinskyi/magento2-seo-robots-api": "1.0.0",
+        "hryvinskyi/magento2-seo-robots": "1.0.0",
+        "hryvinskyi/magento2-seo-robots-admin-ui": "1.0.0",
+        "hryvinskyi/magento2-seo-robots-frontend": "1.0.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Volodymyr Hryvinskyi",
+            "email": "volodymyr@hryvinskyi.com"
+        }
+    ]
+}
