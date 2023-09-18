@@ -1,13 +1,13 @@
 {
     "name": "hryvinskyi/magento2-seo-robots-pack",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "N/A",
     "type": "metapackage",
     "require": {
         "magento/framework": "*",
         "hryvinskyi/magento2-seo-robots-api": "1.0.0",
         "hryvinskyi/magento2-seo-robots": "1.0.1",
-        "hryvinskyi/magento2-seo-robots-admin-ui": "1.0.0",
+        "hryvinskyi/magento2-seo-robots-admin-ui": "1.0.1",
         "hryvinskyi/magento2-seo-robots-frontend": "1.0.0"
     },
     "require-dev": {
