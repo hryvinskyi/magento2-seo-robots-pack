@@ -5,7 +5,63 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.7] - 2026-01-11
+## [2.0.0] - 2026-01-11
+
+### BREAKING CHANGES
+- Complete rewrite of robots directive system from hardcoded 8-option combinations to flexible directive arrays
+- Changed API interfaces (RobotsListInterface) - added new methods, deprecated old ones
+- Configuration storage format changed (automatic migration via setup patch included)
+- Updated all module versions to 2.0.0
+- Requires PHP 7.4+ and Magento 2.4.x
+
+### Added
+- Support for ALL Google robots directives including:
+  - Basic directives: index, noindex, follow, nofollow, noarchive, nosnippet, notranslate, noimageindex, none, all
+  - Advanced directives with values: max-snippet:[N], max-image-preview:[none|standard|large], max-video-preview:[N], unavailable_after:[date]
+- Multiselect UI for directive selection
+- Independent X-Robots-Tag HTTP header configuration (separate from meta robots)
+- Flexible directive combination - no longer limited to 8 predefined options
+- Comprehensive validation for directive conflicts and formats
+- Automatic migration from v1.x configuration (no manual reconfiguration needed)
+- New API methods in RobotsListInterface:
+  - buildMetaRobotsFromDirectives() - converts directive array to robots string
+  - getBasicDirectives() - returns all available basic directives
+  - getAdvancedDirectives() - returns advanced directives
+  - validateDirectives() - validates directive array for conflicts
+- New configuration methods in ConfigInterface:
+  - getXRobotsRules() - independent X-Robots-Tag rules
+  - getHttpsXRobotsDirectives() - HTTPS-specific X-Robots directives
+  - getPaginatedMetaRobots() now returns array instead of integer
+
+### Changed
+- Replaced dropdown directive selector with multiselect interface
+- Meta robots and X-Robots-Tag now independently configurable
+- Improved admin UI organization and usability
+- Better error messages and validation feedback
+- Enhanced documentation with migration guide
+- Updated dependencies: all modules now require ^2.0.0 versions
+
+### Deprecated
+- RobotsListInterface::getMetaRobotsByCode() - still works for backward compatibility but use buildMetaRobotsFromDirectives() instead
+- Old numbered constants (NOINDEX_NOFOLLOW = 1, etc.) - marked as deprecated, use directive arrays instead
+
+### Removed
+- Hardcoded 8-option limitation
+- Old MetaRobots source model (replaced with DirectiveList)
+- Old admin UI blocks (replaced with RobotsRules)
+
+### Fixed
+- Return type inconsistencies in Config model methods
+- Directive validation edge cases
+- Migration data loss scenarios
+
+### Migration
+- Automatic configuration migration via Setup Patch (MigrateRobotsConfiguration)
+- Old code-based configurations automatically converted to new directive array format
+- No manual intervention required for existing installations
+- Backward compatibility maintained where possible
+
+## [1.0.7] - 2026-01-11 (Previous)
 
 ### Added
 - X-Robots-Tag HTTP header support (optional, configurable)
