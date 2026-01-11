@@ -25,6 +25,7 @@ This metapackage installs all components for comprehensive robots meta tag manag
 
 ### Base Features
 - Global robots meta tag configuration
+- X-Robots-Tag HTTP header support
 - URL pattern-based robots control
 - Action-based robots control
 - Extension point for custom robots providers
@@ -41,7 +42,7 @@ php bin/magento cache:flush
 ## Configuration
 
 ### Global Configuration
-Navigate to **Stores > Configuration > Hryvinskyi Extensions > SEO > Meta Robots**
+Navigate to **Stores > Configuration > Hryvinskyi SEO > Robots**
 
 ## Available Robots Directives
 
