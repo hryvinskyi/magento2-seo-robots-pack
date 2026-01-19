@@ -1,14 +1,14 @@
 {
     "name": "hryvinskyi/magento2-seo-robots-pack",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Complete SEO Robots solution for Magento 2 with flexible directive management, multiselect UI, and independent X-Robots-Tag configuration",
     "type": "metapackage",
     "require": {
         "magento/framework": "*",
-        "hryvinskyi/magento2-seo-robots-api": "2.0.0",
-        "hryvinskyi/magento2-seo-robots": "2.0.0",
-        "hryvinskyi/magento2-seo-robots-admin-ui": "2.0.0",
-        "hryvinskyi/magento2-seo-robots-frontend": "2.0.0"
+        "hryvinskyi/magento2-seo-robots-api": "2.0.1",
+        "hryvinskyi/magento2-seo-robots": "2.0.1",
+        "hryvinskyi/magento2-seo-robots-admin-ui": "2.0.1",
+        "hryvinskyi/magento2-seo-robots-frontend": "2.0.1"
     },
     "suggest": {
         "hryvinskyi/magento2-seo-robots-category-pack": "Category-based robots meta tag management for Magento 2"
